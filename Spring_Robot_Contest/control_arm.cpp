@@ -1,7 +1,6 @@
 #include "mbed.h"
 
 #define PWM_T 0.1 //PWM周期：100ms
-#define N 5000
 PwmOut PWM_OUT(PB_6); //超音波センサモジュールのTriger端子に入力する信号
 
 
