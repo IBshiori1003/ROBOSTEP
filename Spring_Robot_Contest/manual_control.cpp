@@ -25,6 +25,9 @@ arm_up.period(50);
  * @return int 処理が成功した場合は1を，失敗した場合は0を返す．
  */
 int arm_up_down(int option){
+            arm_down = 0;
+            arm_up = 0;
+            wait(3);
     switch (option){
         case 0:
             arm_down = 0.5;
