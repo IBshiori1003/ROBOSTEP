@@ -11,10 +11,8 @@
 CAN can1(p30,p29);
 Ticker ticker;
 
-PwmOut arm_down(PA_6); //0.5出力 で動く、０出力で動かない
-PwmOut arm_up(PA_5);//0.5出力 で動く、０出力で動かない
-DigitalIn pushrack(PC_11,PullUp); //ラックを押し出す
-DigitalIn pullrack(PC_10,PullUp); //ラックを引き込む
+PwmOut arm_down(PB_1); //0.5出力 で動く、０出力で動かない
+PwmOut arm_up(PB_15);//0.5出力 で動く、０出力で動かない
 arm_down.period(50);
 arm_up.period(50);
 
@@ -24,6 +22,7 @@ arm_up.period(50);
  * @param (option) 0:アームを下げる, 1:アームを上げる
  * @return int 処理が成功した場合は1を，失敗した場合は0を返す．
  */
+
 int arm_up_down(int option){
     switch (option){
         case 0:
